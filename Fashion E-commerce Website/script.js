@@ -121,20 +121,21 @@ function showSection(sectionId) {
     header.innerHTML = ' <li><a href="">Holiday Gifting</a></li><li><a href="">New Arrivals</a></li><li><a href="">Best-Sellers</a></li><li><a href="">Clothing</a></li><li><a href="">Tops & Sweaters</a></li><li><a href="">Pants & Jeans</a></li><li><a href="">Outerwear</a></li><li><a href="">Shoes & Bags</a></li><li id="sale"><a href="" style="color: red;">Sale</a><div class="dropdown-content"><div class="menu"><ul><li><a href="">HIGHLIGHTS</a></li><li><a href="">Shop All New Arrivals</a></li><li><a href="">The Gift Guide</a></li><li><a href="">New Bottoms</a></li><li><a href="">New Tops</a></li><li><a href="">T-Shirt Bundles</a></li><li><a href="">Under $100</a></li></ul><ul><li><a href="">FEATURED SHOPS</a></li><li><a href="">The Holiday Outfit Edit</a></li><li><a href="">Giftable Sweaters</a></li><li><a href="">Uniform & Capsule</a></li><li><a href="">The Performance Chino Shop</a></li><li><a href="">Top Rated Men’s Clothing</a></li></ul><div class="featured-item"><a href=""><img src="/image/dropdown-1.png"></a> </div><div class="featured-item"><a href=""><img src="/image/dropdown-2.png"></a></div></div></div></li>';
   } else if (sectionId === 'about') {
     header.innerHTML = '<li><a href="#about">About</a></li><li><a href="#stores"onclick="showSection(\'stores\')">Stores</a></li><li><a href="#about">Factories</a></li><li><a href="#about">Environmental Initiatives</a></li><li><a href="#about">Our Carbon Commitment</a></li><li><a href="#about">Annual Impact Report</a></li><li><a href="#about">Cleaner Fashion</a></li>';
-  } else if (sectionId === 'blog'){
-    header.innerHTML = '' 
+  } else if (sectionId === 'blog') {
+    header.innerHTML = ''
   }
- 
+
   history.pushState(null, null, '#' + sectionId);
 }
 
-document.addEventListener('DOMContentLoaded', function() {  
-  const hash = window.location.hash.substring(1);  
-  if (hash) {  
-      showSection(hash);  
-  } else {  
-      showSection('men'); // Hiển thị phần Men mặc định  
-  }  
-});  
+document.addEventListener('DOMContentLoaded', function () {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    showSection(hash);
+  } else {
+    showSection('men'); // Hiển thị phần Men mặc định  
+  }
+});
 
- 
+
+//Script cart
